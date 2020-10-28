@@ -15,7 +15,7 @@ const submitForm = (formData) => {
 const userAction = async (jsonData) => {
   const response = await fetch('https://76dff6dc6fd3919dda3db890a710b183.m.pipedream.net', {
     method: 'POST',
-    body: jsonData.json(), // string or object
+    body: JSON.stringify(jsonData), // string or object
     headers: {
       'Content-Type': 'application/json'
     }
